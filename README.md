@@ -1,10 +1,10 @@
 # WEB103 Prework - Creatorverse
 
-Submitted by: **Karan Agrawal**
+Submitted by: **Saurabh Agrawal**
 
 About this web app: **Creatorverse is a React directory for discovering, adding, viewing, editing, and deleting favorite content creators. It supports Supabase CRUD when credentials are configured and includes local fallback data for quick previewing.**
 
-Time spent: **TBD - update before submission** hours
+Time spent: **3** hours
 
 ## Required Features
 
@@ -36,6 +36,8 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented required features:
 
 Add walkthrough GIF or video link here before submission.
+<img width="1425" height="631" alt="Creatorverse" src="https://github.com/user-attachments/assets/416fd829-c070-4570-91e8-0b70b0b7ed1b" />
+
 
 ## Setup
 
