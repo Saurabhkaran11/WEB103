@@ -39,6 +39,12 @@ Add walkthrough GIF or video link here before submission.
 <img width="1425" height="631" alt="Creatorverse" src="https://github.com/user-attachments/assets/416fd829-c070-4570-91e8-0b70b0b7ed1b" />
 
 
+
+https://github.com/user-attachments/assets/a680b769-0960-4a26-86b0-840acc3426d2
+
+
+
+
 ## Setup
 
 1. Install dependencies with `npm install`.
