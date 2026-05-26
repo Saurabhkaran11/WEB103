@@ -1,0 +1,440 @@
+:root {
+  color: #172033;
+  background: #f8faf7;
+  --pico-font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  --pico-primary: #172033;
+  --pico-primary-background: #172033;
+  --pico-primary-border: #172033;
+  --pico-primary-hover-background: #2a374f;
+  --pico-primary-hover-border: #2a374f;
+  --pico-border-radius: 8px;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  font-synthesis: none;
+  line-height: 1.5;
+}
+
+/* Base page reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button svg,
+[role="button"] svg {
+  flex: 0 0 auto;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+/* Shared header and navigation */
+.site-header {
+  align-items: center;
+  background: rgba(248, 250, 247, 0.95);
+  border-bottom: 1px solid #dce3dc;
+  display: flex;
+  justify-content: space-between;
+  max-width: none;
+  padding-bottom: 18px;
+  padding-top: 18px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand,
+.site-nav,
+.add-link,
+.primary-button,
+.secondary-button,
+.danger-button,
+.card-actions {
+  align-items: center;
+  display: flex;
+}
+
+.brand {
+  gap: 10px;
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.site-nav {
+  gap: 10px;
+}
+
+.site-nav a,
+.primary-button,
+.secondary-button,
+.danger-button,
+.card-actions a {
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-nav a {
+  color: #172033;
+  padding: 10px 12px;
+}
+
+.site-nav a.active {
+  background: #172033;
+  color: #ffffff;
+}
+
+.add-link {
+  gap: 6px;
+}
+
+/* Homepage hero inspired by the CodePath Creatorverse example. */
+.home-hero {
+  align-items: center;
+  background: url("/creatorverse-hero.jpg") center / cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  display: flex;
+  min-height: min(72vh, 640px);
+  padding: clamp(70px, 12vw, 120px) 18px;
+  position: relative;
+}
+
+.home-hero::before {
+  background: rgba(4, 9, 19, 0.38);
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.hero-overlay {
+  margin: 0 auto;
+  max-width: 980px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+
+.home-hero h1 {
+  color: #ffffff;
+  font-size: clamp(3.2rem, 12vw, 6.8rem);
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 0.95;
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  margin-top: clamp(30px, 6vw, 58px);
+}
+
+.hero-button {
+  align-items: center;
+  background: rgba(86, 142, 189, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  display: flex;
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  font-weight: 900;
+  gap: 10px;
+  justify-content: center;
+  min-width: min(300px, 100%);
+  text-transform: uppercase;
+}
+
+.hero-button:hover {
+  background: #6da5d5;
+  color: #ffffff;
+}
+
+/* Page layouts */
+.page-section,
+.form-page,
+.detail-layout {
+  max-width: 1180px;
+  padding: clamp(34px, 6vw, 76px) clamp(18px, 4vw, 36px);
+}
+
+.page-heading {
+  align-items: end;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  margin-bottom: 34px;
+}
+
+.page-heading h1,
+.page-heading h2,
+.form-heading h1,
+.detail-copy h1 {
+  font-size: clamp(2.4rem, 8vw, 5.4rem);
+  letter-spacing: 0;
+  line-height: 0.95;
+  margin: 0;
+}
+
+.page-heading p,
+.detail-copy p {
+  color: #52605b;
+  font-size: 1.08rem;
+  max-width: 680px;
+}
+
+.eyebrow {
+  color: #b93b52;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+.primary-button,
+.secondary-button,
+.danger-button {
+  gap: 8px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.primary-button {
+  background: #172033;
+  color: #ffffff;
+}
+
+.secondary-button {
+  background: #e9efe8;
+  color: #172033;
+}
+
+.danger-button {
+  margin-top: 18px;
+}
+
+/* Creator cards */
+.creator-grid {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.creator-card {
+  background: #ffffff;
+  border: 1px solid #dce3dc;
+  border-radius: 8px;
+  box-shadow: 0 18px 45px rgba(23, 32, 51, 0.08);
+  min-height: 430px;
+  overflow: hidden;
+  transition:
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.creator-card:hover {
+  box-shadow: 0 24px 60px rgba(23, 32, 51, 0.14);
+  transform: translateY(-4px);
+}
+
+.card-image-link {
+  display: block;
+}
+
+.creator-image,
+.detail-image {
+  aspect-ratio: 16 / 10;
+  background-color: #f0f0f0;
+  display: block;
+  height: 200px;
+  object-fit: contain;
+  width: 100%;
+}
+
+.creator-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  min-height: 210px;
+  padding: 20px;
+}
+
+.card-kicker {
+  align-items: center;
+  color: #b93b52;
+  display: flex;
+  font-size: 0.76rem;
+  font-weight: 900;
+  gap: 6px;
+  letter-spacing: 0;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.creator-card h2 {
+  font-size: 1.35rem;
+  line-height: 1.15;
+  margin: 0 0 10px;
+}
+
+.creator-card p {
+  color: #52605b;
+  margin: 0;
+}
+
+.card-actions {
+  gap: 10px;
+}
+
+.card-actions a {
+  background: #eef4f1;
+  color: #172033;
+  display: inline-flex;
+  padding: 10px;
+}
+
+.detail-layout {
+  display: grid;
+  gap: 34px;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(300px, 1fr);
+}
+
+.detail-image {
+  border-radius: 8px;
+  min-height: 360px;
+}
+
+.detail-copy {
+  align-self: center;
+}
+
+.detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+/* Forms and status messages */
+.form-page {
+  max-width: 760px;
+}
+
+.form-heading {
+  margin-bottom: 24px;
+}
+
+.form-heading p {
+  color: #52605b;
+  margin-top: 12px;
+}
+
+.creator-form {
+  display: grid;
+  gap: 12px;
+}
+
+.creator-form label {
+  display: grid;
+  gap: 6px;
+}
+
+.creator-form span {
+  font-weight: 800;
+}
+
+.creator-form textarea {
+  resize: vertical;
+}
+
+.creator-form button {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.notice {
+  background: #eef4f1;
+  border: 1px solid #dce3dc;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+
+.error {
+  background: #fdecef;
+  border-color: #efb7c2;
+  color: #7e2031;
+}
+
+.sr-only {
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+/* Small screens get a stacked layout that keeps actions reachable. */
+@media (max-width: 760px) {
+  .site-header,
+  .page-heading,
+  .detail-layout {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .site-header,
+  .site-nav,
+  .page-heading {
+    display: flex;
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
+  }
+
+  .detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .page-heading h1,
+  .page-heading h2,
+  .form-heading h1,
+  .detail-copy h1 {
+    font-size: clamp(2.2rem, 16vw, 3.5rem);
+  }
+
+  .home-hero {
+    min-height: 560px;
+  }
+
+  .hero-button {
+    width: 100%;
+  }
+}
