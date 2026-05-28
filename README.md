@@ -35,15 +35,9 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-Add walkthrough GIF or video link here before submission.
 <img width="1425" height="631" alt="Creatorverse" src="https://github.com/user-attachments/assets/416fd829-c070-4570-91e8-0b70b0b7ed1b" />
 
-
-
 https://github.com/user-attachments/assets/a680b769-0960-4a26-86b0-840acc3426d2
-
-
-
 
 ## Setup
 
@@ -55,8 +49,6 @@ https://github.com/user-attachments/assets/a680b769-0960-4a26-86b0-840acc3426d2
 ## Notes
 
 The app uses Supabase when `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` are present. Without those values, it falls back to browser `localStorage` seeded with five sample creators so the UI can still be reviewed locally.
-
-Before submitting, update the time spent field and add a walkthrough GIF or video link.
 
 ## License
 
