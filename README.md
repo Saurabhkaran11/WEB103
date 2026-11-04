@@ -50,6 +50,14 @@ https://github.com/user-attachments/assets/a680b769-0960-4a26-86b0-840acc3426d2
 
 The app uses Supabase when `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` are present. Without those values, it falls back to browser `localStorage` seeded with five sample creators so the UI can still be reviewed locally.
 
+## Deploy
+
+Host: Vercel. It detects Vite. `vercel.json` sends every path to the app so a creator's own URL works on refresh.
+
+Without settings the app runs in preview mode. Each visitor sees the sample creators and changes stay in their own browser.
+
+To share one list, set `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` and run `database.sql`. Its policies let anyone add, edit or delete creators with no sign-in, so tighten them before you share the link widely.
+
 ## License
 
 Copyright 2026 Karan Agrawal
